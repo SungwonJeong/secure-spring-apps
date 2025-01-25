@@ -1,0 +1,15 @@
+spring.config.activate.on-profile: local
+
+jwt:
+  secret:
+    key:
+      access: ${LOCAL_JWT_ACCESS_KEY}
+      refresh: ${LOCAL_JWT_REFRESH_KEY}
+  access:
+    validity:
+      in:
+        seconds: 7200
+  refresh:
+    validity:
+      in:
+        seconds: 1209600
