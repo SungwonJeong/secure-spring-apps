@@ -1,10 +1,8 @@
-package com.example.securespringapps.security.secure.core.config;
+package com.example.securespringapps.security.secure.core.config.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import javax.crypto.SecretKey;
 
 @ConfigurationProperties(prefix = "jwt")
 @Component
