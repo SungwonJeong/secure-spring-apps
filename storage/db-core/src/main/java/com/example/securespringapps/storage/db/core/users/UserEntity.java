@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Table(name = "users")
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
     @Column(nullable = false, unique = true)
     private String username;
@@ -28,14 +28,14 @@ public class User extends BaseEntity {
     private UserRole role;
 
     @Builder
-    private User(String username, String password, UserRole role) {
+    private UserEntity(String username, String password, UserRole role) {
         this.username = username;
         this.password = password;
         this.role = role;
     }
 
-    public static User generate(String username, String password, UserRole role) {
-        return User.builder()
+    public static UserEntity generate(String username, String password, UserRole role) {
+        return UserEntity.builder()
                 .username(username)
                 .password(password)
                 .role(role)
